@@ -124,10 +124,6 @@ To customize this portfolio for your own use:
 
 This project is open source and available under the [MIT License]([LICENSE](https://github.com/BipronathSaha12/bipronathsaha/blob/main/LICENSE).
 
-## 🤝 Contributing
-
-Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](../../issues).
-
 ## 📧 Contact
 
 - Email: bipronathsaha@gmail.com
