@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Bipronath Saha | Full Stack Django Developer</title>
+    <meta name="description" content="View all projects by Bipronath Saha - Full Stack Python Django Developer. Projects include Arduino, Python/Django, and C based applications.">
+    <meta name="keywords" content="Bipronath Saha, Projects, Portfolio, Django, Python, Arduino, Web Development">
+    <meta name="author" content="Bipronath Saha">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Projects | Bipronath Saha">
+    <meta property="og:description" content="View all projects by Bipronath Saha - Full Stack Python Django Developer.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bipronath-saha.netlify.app/projects.html">
+    <meta property="og:image" content="assets/img/og-image.png">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Projects | Bipronath Saha">
+    <meta name="twitter:description" content="View all projects by Bipronath Saha - Full Stack Python Django Developer.">
+    <meta name="twitter:image" content="assets/img/og-image.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <link rel="apple-touch-icon" href="assets/img/favicon.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- AOS Animation -->
+    <link href="assets/cdn/aos.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="font-poppins antialiased">
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="fixed inset-0 z-50 flex items-center justify-center bg-dark-900">
+        <div class="text-center">
+            <div class="loader mb-4"></div>
+            <p class="text-white text-lg font-mono">Loading...</p>
+        </div>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button id="scroll-to-top" class="fixed bottom-8 right-8 z-40 hidden bg-primary-500 text-white w-12 h-12 rounded-full shadow-lg hover:bg-primary-600 transition-all duration-300 transform hover:scale-110">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-40 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <a href="index.html" class="text-2xl font-bold text-white">
+                    <span class="text-primary-500">&lt;</span>BS<span class="text-primary-500">/&gt;</span>
+                </a>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link text-white hover:text-primary-500 transition-colors">Home</a>
+                    <a href="about.html" class="nav-link text-white hover:text-primary-500 transition-colors">About</a>
+                    <a href="projects.html" class="nav-link text-white hover:text-primary-500 transition-colors">Projects</a>
+                    <a href="contact.html" class="nav-link text-white hover:text-primary-500 transition-colors">Contact</a>
+                    
+                    <!-- Dark/Light Mode Toggle -->
+                    <button id="theme-toggle" class="p-2 rounded-lg bg-dark-800 hover:bg-dark-700 transition-colors">
+                        <i class="fas fa-moon text-white"></i>
+                    </button>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-white p-2">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-dark-900/95 backdrop-blur-lg">
+            <div class="px-4 py-4 space-y-3">
+                <a href="index.html" class="block nav-link text-white hover:text-primary-500 py-2">Home</a>
+                <a href="about.html" class="block nav-link text-white hover:text-primary-500 py-2">About</a>
+                <a href="projects.html" class="block nav-link text-white hover:text-primary-500 py-2">Projects</a>
+                <a href="contact.html" class="block nav-link text-white hover:text-primary-500 py-2">Contact</a>
+                <button id="mobile-theme-toggle" class="w-full text-left text-white py-2">
+                    <i class="fas fa-moon mr-2"></i> Toggle Theme
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="pt-32 pb-20 bg-dark-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4" data-aos="fade-up">
+                My <span class="text-primary-500">Projects</span>
+            </h1>
+            <p class="text-gray-400 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+                A collection of my work showcasing expertise in various technologies
+            </p>
+        </div>
+    </section>
+
+    <!-- Filter Buttons -->
+    <section class="py-8 bg-dark-900 sticky top-16 z-30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-wrap justify-center gap-4">
+                <button class="filter-btn active px-6 py-2 bg-primary-500 text-white rounded-full font-medium transition-all duration-300" data-filter="all">
+                    All Projects
+                </button>
+                <button class="filter-btn px-6 py-2 bg-dark-800 text-white rounded-full font-medium hover:bg-primary-500 transition-all duration-300" data-filter="arduino">
+                    Arduino
+                </button>
+                <button class="filter-btn px-6 py-2 bg-dark-800 text-white rounded-full font-medium hover:bg-primary-500 transition-all duration-300" data-filter="python">
+                    Python / Django
+                </button>
+                <button class="filter-btn px-6 py-2 bg-dark-800 text-white rounded-full font-medium hover:bg-primary-500 transition-all duration-300" data-filter="c">
+                    C
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Grid -->
+    <section class="py-20 bg-dark-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-grid">
+                <!-- Arduino Projects -->
+                <div class="project-card bg-dark-900 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300" data-category="arduino" data-aos="fade-up">
+                    <div class="h-48 bg-gradient-to-br from-blue-500/20 to-blue-600/20 flex items-center justify-center">
+                        <i class="fas fa-bolt text-6xl text-blue-500"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2">Arduino Based Voltage Protection System</h3>
+                        <p class="text-gray-400 mb-4 text-sm">Smart voltage protection system using Arduino to protect electrical appliances from voltage fluctuations.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-blue-500/20 text-blue-500 text-xs rounded-full">Arduino</span>
+                            <span class="px-3 py-1 bg-blue-500/20 text-blue-500 text-xs rounded-full">Embedded</span>
+                        </div>
+                        <a href="https://github.com/BipronathSaha12/Arduino-Based-Voltage-Protection-System" target="_blank" class="inline-flex items-center text-blue-500 hover:text-blue-400 transition-colors">
+                            <i class="fab fa-github mr-2"></i> View Project
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="project-card bg-dark-900 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300" data-category="arduino" data-aos="fade-up" data-aos-delay="50">
+                    <div class="h-48 bg-gradient-to-br from-red-500/20 to-red-600/20 flex items-center justify-center">
+                        <i class="fas fa-heartbeat text-6xl text-red-500"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2">Portable ECG Monitoring System</h3>
+                        <p class="text-gray-400 mb-4 text-sm">IoT-based ECG monitoring system using ESP32 for heart disease detection with real-time alerts.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-red-500/20 text-red-500 text-xs rounded-full">ESP32</span>
+                            <span class="px-3 py-1 bg-red-500/20 text-red-500 text-xs rounded-full">IoT</span>
+                            <span class="px-3 py-1 bg-red-500/20 text-red-500 text-xs rounded-full">Healthcare</span>
+                        </div>
+                        <a href="https://github.com/BipronathSaha12/Portable-ECG-Monitoring-and-Heart-Deaceses-Detection" target="_blank" class="inline-flex items-center text-red-500 hover:text-red-400 transition-colors">
+                            <i class="fab fa-github mr-2"></i> View Project
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Python/Django Projects -->
+                <div class="project-card bg-dark-900 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300" data-category="python" data-aos="fade-up" data-aos-delay="100">
+                    <div class="h-48 bg-gradient-to-br from-green-500/20 to-green-600/20 flex items-center justify-center">
+                        <i class="fas fa-robot text-6xl text-green-500"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2">AI Emotion & Gesture Recognizer</h3>
+                        <p class="text-gray-400 mb-4 text-sm">AI-powered system that recognizes human emotions and gestures using deep learning and computer vision.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-green-500/20 text-green-500 text-xs rounded-full">Python</span>
+                            <span class="px-3 py-1 bg-green-500/20 text-green-500 text-xs rounded-full">AI/ML</span>
+                            <span class="px-3 py-1 bg-green-500/20 text-green-500 text-xs rounded-full">OpenCV</span>
+                        </div>
+                        <a href="https://github.com/BipronathSaha12/AI-Based-Emotion-and-Gesture-Recognizer-" target="_blank" class="inline-flex items-center text-green-500 hover:text-green-400 transition-colors">
+                            <i class="fab fa-github mr-2"></i> View Project
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="project-card bg-dark-900 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300" data-category="python" data-aos="fade-up" data-aos-delay="150">
+                    <div class="h-48 bg-gradient-to-br from-yellow-500/20 to-yellow-600/20 flex items-center justify-center">
+                        <i class="fas fa-user-secret text-6xl text-yellow-500"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2">AI Face Detection with Email Notification</h3>
+                        <p class="text-gray-400 mb-4 text-sm">Real-time face detection system that sends email notifications when unknown faces are detected.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-yellow-500/20 text-yellow-500 text-xs rounded-full">Python</span>
+                            <span class="px-3 py-1 bg-yellow-500/20 text-yellow-500 text-xs rounded-full">OpenCV</span>
+                            <span class="px-3 py-1 bg-yellow-500/20 text-yellow-500 text-xs rounded-full">SMTP</span>
+                        </div>
+                        <a href="https://github.com/BipronathSaha12/-AI-Face-Detector-with-Email-Notification" target="_blank" class="inline-flex items-center text-yellow-500 hover:text-yellow-400 transition-colors">
+                            <i class="fab fa-github mr-2"></i> View Project
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="project-card bg-dark-900 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300" data-category="python" data-aos="fade-up" data-aos-delay="200">
+                    <div class="h-48 bg-gradient-to-br from-purple-500/20 to-purple-600/20 flex items-center justify-center">
+                        <i class="fas fa-comments text-6xl text-purple-500"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2">Secure GUI Based Chat Application</h3>
+                        <p class="text-gray-400 mb-4 text-sm">End-to-end encrypted chat application with modern GUI for secure communication.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-purple-500/20 text-purple-500 text-xs rounded-full">Python</span>
+                            <span class="px-3 py-1 bg-purple-500/20 text-purple-500 text-xs rounded-full">Encryption</span>
+                            <span class="px-3 py-1 bg-purple-500/20 text-purple-500 text-xs rounded-full">GUI</span>
+                        </div>
+                        <a href="https://github.com/BipronathSaha12/secure_gui_chat_app" target="_blank" class="inline-flex items-center text-purple-500 hover:text-purple-400 transition-colors">
+                            <i class="fab fa-github mr-2"></i> View Project
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="project-card bg-dark-900 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300" data-category="python" data-aos="fade-up" data-aos-delay="250">
+                    <div class="h-48 bg-gradient-to-br from-pink-500/20 to-pink-600/20 flex items-center justify-center">
+                        <i class="fas fa-lock text-6xl text-pink-500"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2">Secure File Encryptor</h3>
+                        <p class="text-gray-400 mb-4 text-sm">Desktop application for secure file encryption and decryption using AES-256 encryption.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-pink-500/20 text-pink-500 text-xs rounded-full">Python</span>
+                            <span class="px-3 py-1 bg-pink-500/20 text-pink-500 text-xs rounded-full">Security</span>
+                            <span class="px-3 py-1 bg-pink-500/20 text-pink-500 text-xs rounded-full">AES-256</span>
+                        </div>
+                        <a href="https://github.com/BipronathSaha12/secure-file-encryptor" target="_blank" class="inline-flex items-center text-pink-500 hover:text-pink-400 transition-colors">
+                            <i class="fab fa-github mr-2"></i> View Project
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="project-card bg-dark-900 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300" data-category="python" data-aos="fade-up" data-aos-delay="300">
+                    <div class="h-48 bg-gradient-to-br from-indigo-500/20 to-indigo-600/20 flex items-center justify-center">
+                        <i class="fas fa-robot text-6xl text-indigo-500"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2">Windows Automation Bot Pro</h3>
+                        <p class="text-gray-400 mb-4 text-sm">Powerful Windows automation tool that automates repetitive tasks and improves productivity.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-indigo-500/20 text-indigo-500 text-xs rounded-full">Python</span>
+                            <span class="px-3 py-1 bg-indigo-500/20 text-indigo-500 text-xs rounded-full">Automation</span>
+                            <span class="px-3 py-1 bg-indigo-500/20 text-indigo-500 text-xs rounded-full">Windows</span>
+                        </div>
+                        <a href="https://github.com/BipronathSaha12/windows-automation-bot-pro" target="_blank" class="inline-flex items-center text-indigo-500 hover:text-indigo-400 transition-colors">
+                            <i class="fab fa-github mr-2"></i> View Project
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="project-card bg-dark-900 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300" data-category="python" data-aos="fade-up" data-aos-delay="350">
+                    <div class="h-48 bg-gradient-to-br from-teal-500/20 to-teal-600/20 flex items-center justify-center">
+                        <i class="fas fa-calendar-check text-6xl text-teal-500"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2">Django Event Booking System</h3>
+                        <p class="text-gray-400 mb-4 text-sm">Full-featured event booking system built with Django including ticket management and payments.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-teal-500/20 text-teal-500 text-xs rounded-full">Django</span>
+                            <span class="px-3 py-1 bg-teal-500/20 text-teal-500 text-xs rounded-full">Web App</span>
+                        </div>
+                        <a href="https://github.com/BipronathSaha12/booking_project" target="_blank" class="inline-flex items-center text-teal-500 hover:text-teal-400 transition-colors">
+                            <i class="fab fa-github mr-2"></i> View Project
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="project-card bg-dark-900 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300" data-category="python" data-aos="fade-up" data-aos-delay="400">
+                    <div class="h-48 bg-gradient-to-br from-orange-500/20 to-orange-600/20 flex items-center justify-center">
+                        <i class="fas fa-chart-line text-6xl text-orange-500"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2">Django Price Monitor</h3>
+                        <p class="text-gray-400 mb-4 text-sm">Web application for monitoring product prices across multiple e-commerce platforms.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-orange-500/20 text-orange-500 text-xs rounded-full">Django</span>
+                            <span class="px-3 py-1 bg-orange-500/20 text-orange-500 text-xs rounded-full">Web Scraping</span>
+                        </div>
+                        <a href="https://github.com/BipronathSaha12/price_monitor" target="_blank" class="inline-flex items-center text-orange-500 hover:text-orange-400 transition-colors">
+                            <i class="fab fa-github mr-2"></i> View Project
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- C Projects -->
+                <div class="project-card bg-dark-900 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300" data-category="c" data-aos="fade-up" data-aos-delay="450">
+                    <div class="h-48 bg-gradient-to-br from-cyan-500/20 to-cyan-600/20 flex items-center justify-center">
+                        <i class="fas fa-microchip text-6xl text-cyan-500"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2">RTOS Implementation</h3>
+                        <p class="text-gray-400 mb-4 text-sm">Real-Time Operating System implementation in C for embedded systems applications.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-cyan-500/20 text-cyan-500 text-xs rounded-full">C</span>
+                            <span class="px-3 py-1 bg-cyan-500/20 text-cyan-500 text-xs rounded-full">RTOS</span>
+                            <span class="px-3 py-1 bg-cyan-500/20 text-cyan-500 text-xs rounded-full">Embedded</span>
+                        </div>
+                        <a href="https://github.com/BipronathSaha12/RTOS" target="_blank" class="inline-flex items-center text-cyan-500 hover:text-cyan-400 transition-colors">
+                            <i class="fab fa-github mr-2"></i> View Project
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark-900 py-12 border-t border-dark-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Brand -->
+                <div>
+                    <a href="index.html" class="text-2xl font-bold text-white">
+                        <span class="text-primary-500">&lt;</span>BS<span class="text-primary-500">/&gt;</span>
+                    </a>
+                    <p class="text-gray-400 mt-4">
+                        Full Stack Python Django Developer & Web Developer based in Bangladesh.
+                    </p>
+                    <div class="flex gap-4 mt-4">
+                        <a href="https://linkedin.com/in/bipronath-saha" target="_blank" class="text-gray-400 hover:text-primary-500 transition-colors">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="https://github.com/BipronathSaha12" target="_blank" class="text-gray-400 hover:text-primary-500 transition-colors">
+                            <i class="fab fa-github text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-primary-500 transition-colors">Home</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-primary-500 transition-colors">About</a></li>
+                        <li><a href="projects.html" class="text-gray-400 hover:text-primary-500 transition-colors">Projects</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-primary-500 transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Contact</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><i class="fas fa-envelope mr-2 text-primary-500"></i> bipronathsaha@gmail.com</li>
+                        <li><i class="fas fa-map-marker-alt mr-2 text-primary-500"></i> Bangladesh</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-dark-800 mt-8 pt-8 text-center">
+                <p class="text-gray-400">
+                    &copy; 2026 Bipronath Saha. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/cdn/aos.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

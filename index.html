@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bipronath Saha | Full Stack Django Developer & Web Developer</title>
+    <meta name="description" content="Bipronath Saha - Full Stack Python Django Developer & Web Developer. View my portfolio, projects, and skills.">
+    <meta name="keywords" content="Bipronath Saha, Django Developer, Full Stack Developer, Python Developer, Web Developer, Portfolio">
+    <meta name="author" content="Bipronath Saha">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Bipronath Saha | Full Stack Django Developer">
+    <meta property="og:description" content="Full Stack Python Django Developer & Web Developer. View my portfolio and projects.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bipronath-saha.netlify.app">
+    <meta property="og:image" content="assets/img/og-image.png">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Bipronath Saha | Full Stack Django Developer">
+    <meta name="twitter:description" content="Full Stack Python Django Developer & Web Developer. View my portfolio and projects.">
+    <meta name="twitter:image" content="assets/img/og-image.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <link rel="apple-touch-icon" href="assets/img/favicon.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <!---- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">-->
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- AOS Animation -->
+    <link href="assets/cdn/aos.css" rel="stylesheet">
+    
+    <!-- Typed.js -->
+    <script src="assets/cdn/typed.js"></script>
+    
+    <!-- Particles.js -->
+    <script src="assets/cdn/particles.js"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="font-poppins antialiased">
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="fixed inset-0 z-50 flex items-center justify-center bg-dark-900">
+        <div class="text-center">
+            <div class="loader mb-4"></div>
+            <p class="text-white text-lg font-mono">Loading...</p>
+        </div>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button id="scroll-to-top" class="fixed bottom-8 right-8 z-40 hidden bg-primary-500 text-white w-12 h-12 rounded-full shadow-lg hover:bg-primary-600 transition-all duration-300 transform hover:scale-110">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-40 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <a href="index.html" class="text-2xl font-bold text-white">
+                    <span class="text-primary-500">&lt;</span>BS<span class="text-primary-500">/&gt;</span>
+                </a>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link text-white hover:text-primary-500 transition-colors">Home</a>
+                    <a href="about.html" class="nav-link text-white hover:text-primary-500 transition-colors">About</a>
+                    <a href="projects.html" class="nav-link text-white hover:text-primary-500 transition-colors">Projects</a>
+                    <a href="contact.html" class="nav-link text-white hover:text-primary-500 transition-colors">Contact</a>
+                    
+                    <!-- Dark/Light Mode Toggle -->
+                    <button id="theme-toggle" class="p-2 rounded-lg bg-dark-800 hover:bg-dark-700 transition-colors">
+                        <i class="fas fa-moon text-white"></i>
+                    </button>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-white p-2">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-dark-900/95 backdrop-blur-lg">
+            <div class="px-4 py-4 space-y-3">
+                <a href="index.html" class="block nav-link text-white hover:text-primary-500 py-2">Home</a>
+                <a href="about.html" class="block nav-link text-white hover:text-primary-500 py-2">About</a>
+                <a href="projects.html" class="block nav-link text-white hover:text-primary-500 py-2">Projects</a>
+                <a href="contact.html" class="block nav-link text-white hover:text-primary-500 py-2">Contact</a>
+                <button id="mobile-theme-toggle" class="w-full text-left text-white py-2">
+                    <i class="fas fa-moon mr-2"></i> Toggle Theme
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="min-h-screen flex items-center justify-center relative overflow-hidden">
+        <div id="particles-js" class="absolute inset-0"></div>
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="mb-4" data-aos="fade-down">
+                <span class="inline-block px-4 py-2 bg-primary-500/20 text-primary-500 rounded-full text-sm font-mono">
+                    Welcome to my portfolio
+                </span>
+            </div>
+            
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4" data-aos="fade-up" data-aos-delay="100">
+                Hi, I'm <span class="text-primary-500">Bipronath Saha</span>
+            </h1>
+            
+            <h2 class="text-2xl md:text-3xl lg:text-4xl text-gray-300 mb-8" data-aos="fade-up" data-aos-delay="200">
+                <span class="typing-text"></span>
+            </h2>
+            
+            <p class="text-lg text-gray-400 max-w-2xl mx-auto mb-10" data-aos="fade-up" data-aos-delay="300">
+                Full Stack Python Django Developer & Web Developer specializing in building modern, 
+                scalable web applications with cutting-edge technologies.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center" data-aos="fade-up" data-aos-delay="400">
+                <a href="projects.html" class="inline-flex items-center justify-center px-8 py-3 bg-primary-500 text-white rounded-lg font-semibold hover:bg-primary-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-primary-500/30">
+                    <i class="fas fa-project-diagram mr-2"></i> View Projects
+                </a>
+                <a href="contact.html" class="inline-flex items-center justify-center px-8 py-3 border-2 border-primary-500 text-primary-500 rounded-lg font-semibold hover:bg-primary-500 hover:text-white transition-all duration-300 transform hover:scale-105">
+                    <i class="fas fa-envelope mr-2"></i> Contact Me
+                </a>
+            </div>
+            
+            <!-- Social Links -->
+            <div class="flex justify-center gap-6 mt-12" data-aos="fade-up" data-aos-delay="500">
+                <a href="https://linkedin.com/in/bipronath-saha" target="_blank" class="social-link text-white text-2xl hover:text-primary-500 transition-colors">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/BipronathSaha12" target="_blank" class="social-link text-white text-2xl hover:text-primary-500 transition-colors">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Scroll Down Indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <a href="#about" class="text-white text-3xl">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- About Preview Section -->
+    <section id="about" class="py-20 bg-dark-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <div class="relative inline-block mb-6">
+                        <div class="w-48 h-48 mx-auto rounded-full overflow-hidden border-4 border-primary-500 shadow-lg shadow-primary-500/30">
+                            <img src="assets/img/bipro.jpeg" alt="Bipronath Saha" class="w-full h-full object-cover">
+                        </div>
+                        <div class="absolute bottom-2 right-2 w-6 h-6 bg-green-500 rounded-full border-2 border-dark-900"></div>
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+                        About <span class="text-primary-500">Me</span>
+                    </h2>
+                    <p class="text-gray-400 mb-6 leading-relaxed">
+                        I'm a passionate Full Stack Python Django Developer with expertise in building 
+                        robust web applications. My journey in technology spans across embedded systems, 
+                        AI-powered applications, and modern web development.
+                    </p>
+                    <p class="text-gray-400 mb-8 leading-relaxed">
+                        I love turning complex problems into simple, beautiful, and intuitive solutions. 
+                        When I'm not coding, you'll find me working on embedded systems or exploring new technologies.
+                    </p>
+                    <a href="about.html" class="inline-flex items-center text-primary-500 hover:text-primary-400 transition-colors">
+                        Learn More <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <div class="grid grid-cols-2 gap-4" data-aos="fade-left">
+                    <div class="bg-dark-700 p-6 rounded-xl text-center hover:transform hover:scale-105 transition-all duration-300">
+                        <i class="fas fa-code text-4xl text-primary-500 mb-4"></i>
+                        <h3 class="text-white font-semibold">5+ Years</h3>
+                        <p class="text-gray-400 text-sm">Experience</p>
+                    </div>
+                    <div class="bg-dark-700 p-6 rounded-xl text-center hover:transform hover:scale-105 transition-all duration-300">
+                        <i class="fas fa-project-diagram text-4xl text-primary-500 mb-4"></i>
+                        <h3 class="text-white font-semibold">10+</h3>
+                        <p class="text-gray-400 text-sm">Projects</p>
+                    </div>
+                    <div class="bg-dark-700 p-6 rounded-xl text-center hover:transform hover:scale-105 transition-all duration-300">
+                        <i class="fas fa-users text-4xl text-primary-500 mb-4"></i>
+                        <h3 class="text-white font-semibold">20+</h3>
+                        <p class="text-gray-400 text-sm">Happy Clients</p>
+                    </div>
+                    <div class="bg-dark-700 p-6 rounded-xl text-center hover:transform hover:scale-105 transition-all duration-300">
+                        <i class="fas fa-award text-4xl text-primary-500 mb-4"></i>
+                        <h3 class="text-white font-semibold">5+</h3>
+                        <p class="text-gray-400 text-sm">Awards</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-dark-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4" data-aos="fade-up">
+                    My <span class="text-primary-500">Skills</span>
+                </h2>
+                <p class="text-gray-400 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+                    Technologies and tools I work with to bring ideas to life
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <!-- Skill Cards -->
+                <div class="skill-card bg-dark-800 p-6 rounded-xl text-center hover:transform hover:scale-105 transition-all duration-300" data-aos="fade-up">
+                    <i class="fab fa-python text-5xl text-primary-500 mb-4"></i>
+                    <h3 class="text-white font-semibold">Python</h3>
+                </div>
+                
+                <div class="skill-card bg-dark-800 p-6 rounded-xl text-center hover:transform hover:scale-105 transition-all duration-300" data-aos="fade-up" data-aos-delay="50">
+                    <i class="fas fa-dharmachakra text-5xl text-primary-500 mb-4"></i>
+                    <h3 class="text-white font-semibold">Django</h3>
+                </div>
+                
+                <div class="skill-card bg-dark-800 p-6 rounded-xl text-center hover:transform hover:scale-105 transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fab fa-react text-5xl text-primary-500 mb-4"></i>
+                    <h3 class="text-white font-semibold">React.js</h3>
+                </div>
+                
+                <div class="skill-card bg-dark-800 p-6 rounded-xl text-center hover:transform hover:scale-105 transition-all duration-300" data-aos="fade-up" data-aos-delay="150">
+                    <i class="fab fa-js text-5xl text-primary-500 mb-4"></i>
+                    <h3 class="text-white font-semibold">JavaScript</h3>
+                </div>
+                
+                <div class="skill-card bg-dark-800 p-6 rounded-xl text-center hover:transform hover:scale-105 transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fab fa-html5 text-5xl text-primary-500 mb-4"></i>
+                    <h3 class="text-white font-semibold">HTML5</h3>
+                </div>
+                
+                <div class="skill-card bg-dark-800 p-6 rounded-xl text-center hover:transform hover:scale-105 transition-all duration-300" data-aos="fade-up" data-aos-delay="250">
+                    <i class="fab fa-css3 text-5xl text-primary-500 mb-4"></i>
+                    <h3 class="text-white font-semibold">CSS3</h3>
+                </div>
+                
+                <div class="skill-card bg-dark-800 p-6 rounded-xl text-center hover:transform hover:scale-105 transition-all duration-300" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fab fa-bootstrap text-5xl text-primary-500 mb-4"></i>
+                    <h3 class="text-white font-semibold">Bootstrap</h3>
+                </div>
+                
+                <div class="skill-card bg-dark-800 p-6 rounded-xl text-center hover:transform hover:scale-105 transition-all duration-300" data-aos="fade-up" data-aos-delay="350">
+                    <i class="fab fa-tailwind text-5xl text-primary-500 mb-4"></i>
+                    <h3 class="text-white font-semibold">Tailwind CSS</h3>
+                </div>
+                
+                <div class="skill-card bg-dark-800 p-6 rounded-xl text-center hover:transform hover:scale-105 transition-all duration-300" data-aos="fade-up" data-aos-delay="400">
+                    <i class="fab fa-git-alt text-5xl text-primary-500 mb-4"></i>
+                    <h3 class="text-white font-semibold">Git/GitHub</h3>
+                </div>
+                
+                <div class="skill-card bg-dark-800 p-6 rounded-xl text-center hover:transform hover:scale-105 transition-all duration-300" data-aos="fade-up" data-aos-delay="450">
+                    <i class="fas fa-microchip text-5xl text-primary-500 mb-4"></i>
+                    <h3 class="text-white font-semibold">Arduino</h3>
+                </div>
+                
+                <div class="skill-card bg-dark-800 p-6 rounded-xl text-center hover:transform hover:scale-105 transition-all duration-300" data-aos="fade-up" data-aos-delay="500">
+                    <i class="fab fa-c text-5xl text-primary-500 mb-4"></i>
+                    <h3 class="text-white font-semibold">C</h3>
+                </div>
+                
+                <div class="skill-card bg-dark-800 p-6 rounded-xl text-center hover:transform hover:scale-105 transition-all duration-300" data-aos="fade-up" data-aos-delay="550">
+                    <i class="fas fa-paint-brush text-5xl text-primary-500 mb-4"></i>
+                    <h3 class="text-white font-semibold">Photoshop</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Projects Section -->
+    <section id="featured-projects" class="py-20 bg-dark-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4" data-aos="fade-up">
+                    Featured <span class="text-primary-500">Projects</span>
+                </h2>
+                <p class="text-gray-400 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+                    Some of my recent work showcasing my expertise
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project Card 1 -->
+                <div class="project-card bg-dark-900 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300" data-aos="fade-up">
+                    <div class="h-48 bg-gradient-to-br from-primary-500/20 to-primary-600/20 flex items-center justify-center">
+                        <i class="fas fa-robot text-6xl text-primary-500"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2">AI Emotion & Gesture Recognizer</h3>
+                        <p class="text-gray-400 mb-4 text-sm">AI-powered system that recognizes human emotions and gestures using deep learning.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-primary-500/20 text-primary-500 text-xs rounded-full">Python</span>
+                            <span class="px-3 py-1 bg-primary-500/20 text-primary-500 text-xs rounded-full">AI/ML</span>
+                        </div>
+                        <a href="https://github.com/BipronathSaha12/AI-Based-Emotion-and-Gesture-Recognizer-" target="_blank" class="inline-flex items-center text-primary-500 hover:text-primary-400 transition-colors">
+                            View Project <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Project Card 2 -->
+                <div class="project-card bg-dark-900 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
+                    <div class="h-48 bg-gradient-to-br from-primary-500/20 to-primary-600/20 flex items-center justify-center">
+                        <i class="fas fa-shield-alt text-6xl text-primary-500"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2">Secure File Encryptor</h3>
+                        <p class="text-gray-400 mb-4 text-sm">Desktop application for secure file encryption and decryption using AES-256.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-primary-500/20 text-primary-500 text-xs rounded-full">Python</span>
+                            <span class="px-3 py-1 bg-primary-500/20 text-primary-500 text-xs rounded-full">Security</span>
+                        </div>
+                        <a href="https://github.com/BipronathSaha12/secure-file-encryptor" target="_blank" class="inline-flex items-center text-primary-500 hover:text-primary-400 transition-colors">
+                            View Project <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Project Card 3 -->
+                <div class="project-card bg-dark-900 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+                    <div class="h-48 bg-gradient-to-br from-primary-500/20 to-primary-600/20 flex items-center justify-center">
+                        <i class="fas fa-heartbeat text-6xl text-primary-500"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2">Portable ECG Monitoring System</h3>
+                        <p class="text-gray-400 mb-4 text-sm">IoT-based ECG monitoring system using ESP32 for heart disease detection.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-primary-500/20 text-primary-500 text-xs rounded-full">Arduino</span>
+                            <span class="px-3 py-1 bg-primary-500/20 text-primary-500 text-xs rounded-full">IoT</span>
+                        </div>
+                        <a href="https://github.com/BipronathSaha12/Portable-ECG-Monitoring-and-Heart-Deaceses-Detection" target="_blank" class="inline-flex items-center text-primary-500 hover:text-primary-400 transition-colors">
+                            View Project <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="projects.html" class="inline-flex items-center px-8 py-3 bg-primary-500 text-white rounded-lg font-semibold hover:bg-primary-600 transition-all duration-300">
+                    View All Projects <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- GitHub Stats Section -->
+    <section id="github-stats" class="py-20 bg-dark-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4" data-aos="fade-up">
+                    GitHub <span class="text-primary-500">Stats</span>
+                </h2>
+                <p class="text-gray-400 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+                    My open source contributions and coding activity
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="bg-dark-800 p-6 rounded-xl text-center" data-aos="fade-up">
+                    <h3 class="text-4xl font-bold text-primary-500">35</h3>
+                    <p class="text-gray-400 mt-2">Repositories</p>
+                </div>
+                <div class="bg-dark-800 p-6 rounded-xl text-center" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="text-4xl font-bold text-primary-500">1000+</h3>
+                    <p class="text-gray-400 mt-2">Commits</p>
+                </div>
+                <div class="bg-dark-800 p-6 rounded-xl text-center" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="text-4xl font-bold text-primary-500">50+</h3>
+                    <p class="text-gray-400 mt-2">Contributors</p>
+                </div>
+                <div class="bg-dark-800 p-6 rounded-xl text-center" data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="text-4xl font-bold text-primary-500">10k+</h3>
+                    <p class="text-gray-400 mt-2">Total Downloads</p>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center" data-aos="fade-up">
+                <a href="https://github.com/BipronathSaha12" target="_blank" class="inline-flex items-center px-8 py-3 border-2 border-primary-500 text-primary-500 rounded-lg font-semibold hover:bg-primary-500 hover:text-white transition-all duration-300">
+                    <i class="fab fa-github mr-2"></i> View GitHub Profile
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA Section -->
+    <section class="py-20 bg-dark-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4" data-aos="fade-up">
+                Let's Work <span class="text-primary-500">Together</span>
+            </h2>
+            <p class="text-gray-400 max-w-2xl mx-auto mb-8" data-aos="fade-up" data-aos-delay="100">
+                Have a project in mind? Let's discuss how we can work together to bring your ideas to life.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center" data-aos="fade-up" data-aos-delay="200">
+                <a href="mailto:bipronathsaha@gmail.com" class="px-8 py-3 bg-primary-500 text-white rounded-lg font-semibold hover:bg-primary-600 transition-all duration-300">
+                    Get In Touch
+                </a>
+                <a href="contact.html" class="px-8 py-3 border-2 border-primary-500 text-primary-500 rounded-lg font-semibold hover:bg-primary-500 hover:text-white transition-all duration-300">
+                    Contact Form
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark-900 py-12 border-t border-dark-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Brand -->
+                <div>
+                    <a href="index.html" class="text-2xl font-bold text-white">
+                        <span class="text-primary-500">&lt;</span>BS<span class="text-primary-500">/&gt;</span>
+                    </a>
+                    <p class="text-gray-400 mt-4">
+                        Full Stack Python Django Developer & Web Developer based in Bangladesh.
+                    </p>
+                    <div class="flex gap-4 mt-4">
+                        <a href="https://linkedin.com/in/bipronath-saha" target="_blank" class="text-gray-400 hover:text-primary-500 transition-colors">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="https://github.com/BipronathSaha12" target="_blank" class="text-gray-400 hover:text-primary-500 transition-colors">
+                            <i class="fab fa-github text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-primary-500 transition-colors">Home</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-primary-500 transition-colors">About</a></li>
+                        <li><a href="projects.html" class="text-gray-400 hover:text-primary-500 transition-colors">Projects</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-primary-500 transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Contact</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><i class="fas fa-envelope mr-2 text-primary-500"></i> bipronathsaha@gmail.com</li>
+                        <li><i class="fas fa-map-marker-alt mr-2 text-primary-500"></i> Bangladesh</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-dark-800 mt-8 pt-8 text-center">
+                <p class="text-gray-400">
+                    &copy; 2026 Bipronath Saha. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/cdn/aos.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

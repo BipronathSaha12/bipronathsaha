@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Bipronath Saha | Full Stack Django Developer</title>
+    <meta name="description" content="Learn more about Bipronath Saha - Full Stack Python Django Developer & Web Developer. View my background, experience, and skills.">
+    <meta name="keywords" content="Bipronath Saha, About, Django Developer, Full Stack Developer, Python Developer, Web Developer, Portfolio">
+    <meta name="author" content="Bipronath Saha">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="About | Bipronath Saha">
+    <meta property="og:description" content="Full Stack Python Django Developer & Web Developer. Learn more about my journey.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bipronath-saha.netlify.app/about.html">
+    <meta property="og:image" content="assets/img/og-image.png">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="About | Bipronath Saha">
+    <meta name="twitter:description" content="Full Stack Python Django Developer & Web Developer. Learn more about my journey.">
+    <meta name="twitter:image" content="assets/img/og-image.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <link rel="apple-touch-icon" href="assets/img/favicon.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- AOS Animation -->
+    <link href="assets/cdn/aos.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="font-poppins antialiased">
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="fixed inset-0 z-50 flex items-center justify-center bg-dark-900">
+        <div class="text-center">
+            <div class="loader mb-4"></div>
+            <p class="text-white text-lg font-mono">Loading...</p>
+        </div>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button id="scroll-to-top" class="fixed bottom-8 right-8 z-40 hidden bg-primary-500 text-white w-12 h-12 rounded-full shadow-lg hover:bg-primary-600 transition-all duration-300 transform hover:scale-110">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-40 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <a href="index.html" class="text-2xl font-bold text-white">
+                    <span class="text-primary-500">&lt;</span>BS<span class="text-primary-500">/&gt;</span>
+                </a>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link text-white hover:text-primary-500 transition-colors">Home</a>
+                    <a href="about.html" class="nav-link text-white hover:text-primary-500 transition-colors">About</a>
+                    <a href="projects.html" class="nav-link text-white hover:text-primary-500 transition-colors">Projects</a>
+                    <a href="contact.html" class="nav-link text-white hover:text-primary-500 transition-colors">Contact</a>
+                    
+                    <!-- Dark/Light Mode Toggle -->
+                    <button id="theme-toggle" class="p-2 rounded-lg bg-dark-800 hover:bg-dark-700 transition-colors">
+                        <i class="fas fa-moon text-white"></i>
+                    </button>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-white p-2">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-dark-900/95 backdrop-blur-lg">
+            <div class="px-4 py-4 space-y-3">
+                <a href="index.html" class="block nav-link text-white hover:text-primary-500 py-2">Home</a>
+                <a href="about.html" class="block nav-link text-white hover:text-primary-500 py-2">About</a>
+                <a href="projects.html" class="block nav-link text-white hover:text-primary-500 py-2">Projects</a>
+                <a href="contact.html" class="block nav-link text-white hover:text-primary-500 py-2">Contact</a>
+                <button id="mobile-theme-toggle" class="w-full text-left text-white py-2">
+                    <i class="fas fa-moon mr-2"></i> Toggle Theme
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="pt-32 pb-20 bg-dark-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4" data-aos="fade-up">
+                About <span class="text-primary-500">Me</span>
+            </h1>
+            <p class="text-gray-400 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+                Get to know more about my background, skills, and passion for technology
+            </p>
+        </div>
+    </section>
+
+    <!-- About Content -->
+    <section class="py-20 bg-dark-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-start">
+                <!-- Profile Image -->
+                <div class="relative" data-aos="fade-right">
+                    <div class="bg-dark-800 rounded-2xl p-4">
+                        <div class="w-full h-80 md:h-96 rounded-full overflow-hidden border-4 border-primary-500 shadow-lg shadow-primary-500/30">
+                            <img src="assets/img/bipro.jpeg" alt="Bipronath Saha" class="w-full h-full object-cover object-top">
+                        </div>
+                    </div>
+                    <!-- Decorative elements -->
+                    <div class="absolute -top-4 -right-4 w-24 h-24 bg-primary-500/20 rounded-full blur-xl"></div>
+                    <div class="absolute -bottom-4 -left-4 w-32 h-32 bg-primary-500/10 rounded-full blur-xl"></div>
+                </div>
+                
+                <!-- About Info -->
+                <div data-aos="fade-left">
+                    <h2 class="text-3xl font-bold text-white mb-6">
+                        I'm <span class="text-primary-500">Bipronath Saha</span>
+                    </h2>
+                    <h3 class="text-xl text-primary-500 mb-4">Full Stack Python Django Developer & Web Developer</h3>
+                    
+                    <p class="text-gray-400 mb-6 leading-relaxed">
+                        I'm a passionate Full Stack Python Django Developer with a strong foundation in building 
+                        modern, scalable web applications. My journey in technology started with a curiosity for 
+                        how things work, and it has evolved into a career dedicated to creating innovative solutions.
+                    </p>
+                    
+                    <p class="text-gray-400 mb-6 leading-relaxed">
+                        I specialize in Python, Django, and web technologies, with additional expertise in embedded 
+                        systems and AI-powered applications. My goal is to build applications that not only meet 
+                        technical requirements but also provide exceptional user experiences.
+                    </p>
+                    
+                    <p class="text-gray-400 mb-8 leading-relaxed">
+                        When I'm not coding, I enjoy working on embedded systems projects, exploring new technologies, 
+                        and contributing to open-source projects. I believe in continuous learning and staying 
+                        updated with the latest trends in web development.
+                    </p>
+                    
+                    <!-- Key Highlights -->
+                    <div class="grid grid-cols-2 gap-4 mb-8">
+                        <div class="flex items-center text-gray-400">
+                            <i class="fas fa-check-circle text-primary-500 mr-3"></i>
+                            <span>5+ Years Experience</span>
+                        </div>
+                        <div class="flex items-center text-gray-400">
+                            <i class="fas fa-check-circle text-primary-500 mr-3"></i>
+                            <span>10+ Projects Completed</span>
+                        </div>
+                        <div class="flex items-center text-gray-400">
+                            <i class="fas fa-check-circle text-primary-500 mr-3"></i>
+                            <span>Remote Work Ready</span>
+                        </div>
+                        <div class="flex items-center text-gray-400">
+                            <i class="fas fa-check-circle text-primary-500 mr-3"></i>
+                            <span>Full Stack Expert</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Resume Download Button -->
+                    <a href="https://drive.google.com/file/d/13gJ6pjBruTcukDH9MSWBZyepM7PD_SLw/view?usp=sharing" class="inline-flex items-center px-6 py-3 bg-primary-500 text-white rounded-lg font-semibold hover:bg-primary-600 transition-all duration-300" target="_blank">
+                        <i class="fas fa-download mr-2"></i> Download Resume
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Progress Section -->
+    <section class="py-20 bg-dark-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4" data-aos="fade-up">
+                    Technical <span class="text-primary-500">Skills</span>
+                </h2>
+                <p class="text-gray-400 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+                    My proficiency in various technologies and tools
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Skill Progress Bars -->
+                <div class="space-y-6">
+                    <!-- Python -->
+                    <div data-aos="fade-up">
+                        <div class="flex justify-between mb-2">
+                            <span class="text-white font-medium">Python</span>
+                            <span class="text-primary-500">95%</span>
+                        </div>
+                        <div class="h-2 bg-dark-700 rounded-full overflow-hidden">
+                            <div class="skill-progress h-full bg-primary-500 rounded-full" data-progress="95"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Django -->
+                    <div data-aos="fade-up" data-aos-delay="50">
+                        <div class="flex justify-between mb-2">
+                            <span class="text-white font-medium">Django</span>
+                            <span class="text-primary-500">90%</span>
+                        </div>
+                        <div class="h-2 bg-dark-700 rounded-full overflow-hidden">
+                            <div class="skill-progress h-full bg-primary-500 rounded-full" data-progress="90"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- JavaScript -->
+                    <div data-aos="fade-up" data-aos-delay="100">
+                        <div class="flex justify-between mb-2">
+                            <span class="text-white font-medium">JavaScript</span>
+                            <span class="text-primary-500">85%</span>
+                        </div>
+                        <div class="h-2 bg-dark-700 rounded-full overflow-hidden">
+                            <div class="skill-progress h-full bg-primary-500 rounded-full" data-progress="85"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- React.js -->
+                    <div data-aos="fade-up" data-aos-delay="150">
+                        <div class="flex justify-between mb-2">
+                            <span class="text-white font-medium">React.js</span>
+                            <span class="text-primary-500">80%</span>
+                        </div>
+                        <div class="h-2 bg-dark-700 rounded-full overflow-hidden">
+                            <div class="skill-progress h-full bg-primary-500 rounded-full" data-progress="80"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- HTML/CSS -->
+                    <div data-aos="fade-up" data-aos-delay="200">
+                        <div class="flex justify-between mb-2">
+                            <span class="text-white font-medium">HTML5/CSS3</span>
+                            <span class="text-primary-500">95%</span>
+                        </div>
+                        <div class="h-2 bg-dark-700 rounded-full overflow-hidden">
+                            <div class="skill-progress h-full bg-primary-500 rounded-full" data-progress="95"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="space-y-6">
+                    <!-- Tailwind CSS -->
+                    <div data-aos="fade-up">
+                        <div class="flex justify-between mb-2">
+                            <span class="text-white font-medium">Tailwind CSS</span>
+                            <span class="text-primary-500">90%</span>
+                        </div>
+                        <div class="h-2 bg-dark-700 rounded-full overflow-hidden">
+                            <div class="skill-progress h-full bg-primary-500 rounded-full" data-progress="90"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Git/GitHub -->
+                    <div data-aos="fade-up" data-aos-delay="50">
+                        <div class="flex justify-between mb-2">
+                            <span class="text-white font-medium">Git/GitHub</span>
+                            <span class="text-primary-500">85%</span>
+                        </div>
+                        <div class="h-2 bg-dark-700 rounded-full overflow-hidden">
+                            <div class="skill-progress h-full bg-primary-500 rounded-full" data-progress="85"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Arduino -->
+                    <div data-aos="fade-up" data-aos-delay="100">
+                        <div class="flex justify-between mb-2">
+                            <span class="text-white font-medium">Arduino/ESP32</span>
+                            <span class="text-primary-500">80%</span>
+                        </div>
+                        <div class="h-2 bg-dark-700 rounded-full overflow-hidden">
+                            <div class="skill-progress h-full bg-primary-500 rounded-full" data-progress="80"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- C -->
+                    <div data-aos="fade-up" data-aos-delay="150">
+                        <div class="flex justify-between mb-2">
+                            <span class="text-white font-medium">C Programming</span>
+                            <span class="text-primary-500">75%</span>
+                        </div>
+                        <div class="h-2 bg-dark-700 rounded-full overflow-hidden">
+                            <div class="skill-progress h-full bg-primary-500 rounded-full" data-progress="75"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Photoshop -->
+                    <div data-aos="fade-up" data-aos-delay="200">
+                        <div class="flex justify-between mb-2">
+                            <span class="text-white font-medium">Photoshop</span>
+                            <span class="text-primary-500">70%</span>
+                        </div>
+                        <div class="h-2 bg-dark-700 rounded-full overflow-hidden">
+                            <div class="skill-progress h-full bg-primary-500 rounded-full" data-progress="70"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="py-20 bg-dark-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4" data-aos="fade-up">
+                    My <span class="text-primary-500">Journey</span>
+                </h2>
+                <p class="text-gray-400 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+                    A timeline of my professional and academic experience
+                </p>
+            </div>
+            
+            <div class="relative">
+                <!-- Timeline Line -->
+                <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-dark-700"></div>
+                
+                <!-- Timeline Items -->
+                <div class="space-y-12">
+                    <!-- Item 1 -->
+                    <div class="relative flex items-center justify-between" data-aos="fade-up">
+                        <div class="w-5/12">
+                            <div class="bg-dark-800 p-6 rounded-xl ml-auto mr-4">
+                                <h3 class="text-white font-semibold mb-2">Full Stack Developer</h3>
+                                <p class="text-primary-500 text-sm mb-2">2021 - Present</p>
+                                <p class="text-gray-400 text-sm">Working on various web projects using Django, React, and modern technologies. Building scalable applications and contributing to open source.</p>
+                            </div>
+                        </div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-primary-500 rounded-full"></div>
+                        <div class="w-5/12"></div>
+                    </div>
+                    
+                    <!-- Item 2 -->
+                    <div class="relative flex items-center justify-between" data-aos="fade-up">
+                        <div class="w-5/12"></div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-primary-500 rounded-full"></div>
+                        <div class="w-5/12">
+                            <div class="bg-dark-800 p-6 rounded-xl mr-auto ml-4">
+                                <h3 class="text-white font-semibold mb-2">Embedded Systems</h3>
+                                <p class="text-primary-500 text-sm mb-2">2019 - 2021</p>
+                                <p class="text-gray-400 text-sm">Worked on Arduino and ESP32 based projects including ECG monitoring, voltage protection systems, and IoT applications.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 3 -->
+                    <div class="relative flex items-center justify-between" data-aos="fade-up">
+                        <div class="w-5/12">
+                            <div class="bg-dark-800 p-6 rounded-xl ml-auto mr-4">
+                                <h3 class="text-white font-semibold mb-2">Started Programming</h3>
+                                <p class="text-primary-500 text-sm mb-2">2018</p>
+                                <p class="text-gray-400 text-sm">Began my journey in programming with C language and web development. Explored HTML, CSS, JavaScript, and Python.</p>
+                            </div>
+                        </div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-primary-500 rounded-full"></div>
+                        <div class="w-5/12"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark-900 py-12 border-t border-dark-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Brand -->
+                <div>
+                    <a href="index.html" class="text-2xl font-bold text-white">
+                        <span class="text-primary-500">&lt;</span>BS<span class="text-primary-500">/&gt;</span>
+                    </a>
+                    <p class="text-gray-400 mt-4">
+                        Full Stack Python Django Developer & Web Developer based in Bangladesh.
+                    </p>
+                    <div class="flex gap-4 mt-4">
+                        <a href="https://linkedin.com/in/bipronath-saha" target="_blank" class="text-gray-400 hover:text-primary-500 transition-colors">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="https://github.com/BipronathSaha12" target="_blank" class="text-gray-400 hover:text-primary-500 transition-colors">
+                            <i class="fab fa-github text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-primary-500 transition-colors">Home</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-primary-500 transition-colors">About</a></li>
+                        <li><a href="projects.html" class="text-gray-400 hover:text-primary-500 transition-colors">Projects</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-primary-500 transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Contact</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><i class="fas fa-envelope mr-2 text-primary-500"></i> bipronathsaha@gmail.com</li>
+                        <li><i class="fas fa-map-marker-alt mr-2 text-primary-500"></i> Bangladesh</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-dark-800 mt-8 pt-8 text-center">
+                <p class="text-gray-400">
+                    &copy; 2026 Bipronath Saha. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/cdn/aos.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
