@@ -2,7 +2,6 @@
 
 A modern, interactive, fully responsive developer portfolio website built with HTML5, CSS3, Tailwind CSS, and Vanilla JavaScript.
 
-![Portfolio Preview](assets/img/preview.png)
 
 ## 👨‍💻 About
 
@@ -123,7 +122,7 @@ To customize this portfolio for your own use:
 
 ## 📄 License
 
-This project is open source and available under the [MIT License](LICENSE).
+This project is open source and available under the [MIT License]([LICENSE](https://github.com/BipronathSaha12/bipronathsaha/blob/main/LICENSE).
 
 ## 🤝 Contributing
 
