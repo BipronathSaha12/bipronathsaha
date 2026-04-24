@@ -131,7 +131,7 @@ Contributions, issues, and feature requests are welcome! Feel free to check the 
 
 ## 📧 Contact
 
-- Email: bipronath@example.com
+- Email: bipronathsaha@gmail.com
 - LinkedIn: [Bipronath Saha](https://linkedin.com/in/bipronath-saha)
 - GitHub: [BipronathSaha12](https://github.com/BipronathSaha12)
 
