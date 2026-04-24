@@ -122,7 +122,7 @@ To customize this portfolio for your own use:
 
 ## 📄 License
 
-This project is open source and available under the [MIT License]([LICENSE](https://github.com/BipronathSaha12/bipronathsaha/blob/main/LICENSE).
+This project is open source and available under the [MIT LICENSE](https://github.com/BipronathSaha12/bipronathsaha/blob/main/LICENSE).
 
 ## 📧 Contact
 
