@@ -1,7 +1,6 @@
 # Bipronath Saha Portfolio
 
-A modern, interactive, fully responsive developer portfolio website built with HTML5, CSS3, Tailwind CSS, and Vanilla JavaScript.
-
+A modern, interactive, fully responsive developer portfolio website built with React, Vite, Tailwind CSS, and Framer Motion.
 
 ## 👨‍💻 About
 
@@ -9,57 +8,41 @@ This is my personal portfolio website showcasing my skills, projects, and experi
 
 ## 🛠️ Tech Stack
 
-- **HTML5** - Semantic markup
-- **CSS3** - Custom styling
+- **React.js** - UI Library
+- **Vite** - Frontend Build Tool
 - **Tailwind CSS** - Utility-first CSS framework
-- **JavaScript** - Vanilla JS for interactivity
-- **AOS** - Animation library
-- **Typed.js** - Typing animation
-- **Particles.js** - Background particles
+- **Framer Motion** - Animation library
+- **React Router** - Client-side routing
+- **React Icons** - Icon library
 
 ## ✨ Features
 
-- ✅ Animated typing header
-- ✅ Animated navbar with scroll effect
-- ✅ Smooth scrolling
-- ✅ Interactive project cards with filtering (Arduino / Python / C)
-- ✅ Skill progress bars
-- ✅ GitHub stats section
-- ✅ About me section
-- ✅ Resume download button
-- ✅ Contact form with validation
-- ✅ Social links (LinkedIn, GitHub)
-- ✅ Footer with navigation
-- ✅ Dark/Light mode toggle
-- ✅ Mobile responsive
-- ✅ SEO friendly meta tags
+- ✅ Single Page Application (SPA) architecture
+- ✅ Dynamic theme toggling (Dark/Light mode)
+- ✅ Animated page transitions and elements
+- ✅ Interactive project cards with category filtering
+- ✅ Modern glassmorphism UI elements
+- ✅ Mobile responsive design
+- ✅ Contact form
 - ✅ Fast loading performance
-- ✅ Clean animations
-- ✅ Hover effects
-- ✅ Loading animation
-- ✅ Scroll to top button
 
 ## 📁 Project Structure
 
 ```
 portfolio/
-├── index.html          # Home page
-├── about.html          # About page
-├── projects.html       # Projects page
-├── contact.html        # Contact page
-├── assets/
-│   ├── css/
-│   │   └── style.css   # Custom styles
-│   ├── js/
-│   │   └── main.js     # JavaScript functionality
-│   ├── img/            # Images and icons
-│   └── resume/         # Resume files
-├── components/
-│   ├── navbar.html     # Navbar component
-│   └── footer.html     # Footer component
-├── seo/
-│   └── meta.html       # SEO meta tags
-├── netlify.toml        # Netlify configuration
+├── public/             # Static assets
+├── src/
+│   ├── components/     # Reusable UI components (Navbar, Footer, Contact)
+│   ├── data/           # Application data (Projects list)
+│   ├── pages/          # Route components (Home, About, Projects, Contact)
+│   ├── App.jsx         # Main application component & routing
+│   ├── index.css       # Global styles and Tailwind directives
+│   └── main.jsx        # Application entry point
+├── .gitignore          # Git ignore rules
+├── index.html          # HTML entry point
+├── package.json        # Project dependencies and scripts
+├── tailwind.config.js  # Tailwind configuration
+├── vite.config.js      # Vite configuration
 └── README.md           # This file
 ```
 
@@ -75,17 +58,24 @@ portfolio/
    cd portfolio
    ```
 
-3. **Open in browser:**
-   - Simply open `index.html` in your web browser
-   - Or use a local server like Live Server in VS Code
+3. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+4. **Run the development server:**
+   ```bash
+   npm run dev
+   ```
+   The application will be available at `http://localhost:5173` (or the port specified in your terminal).
 
 ## 📱 Responsive Design
 
-The portfolio is fully responsive and works on:
-- 📱 Mobile devices (320px+)
-- 📱 Tablets (768px+)
-- 💻 Desktops (1024px+)
-- 🖥️ Large screens (1440px+)
+The portfolio is fully responsive and optimized for:
+- 📱 Mobile devices
+- 📱 Tablets
+- 💻 Desktops
+- 🖥️ Large screens
 
 ## 🔗 Links
 
@@ -94,31 +84,24 @@ The portfolio is fully responsive and works on:
 
 ## 📂 Projects Included
 
-### Arduino Projects
-- Arduino Based Voltage Protection System
-- Portable ECG Monitoring System and Heart Disease Detection
+### React / Django Projects
+- JobTrail (Django Rest Framework, React.Js, Tailwind CSS)
+- Nexus Explorer (React.Js, TailwindCSS)
 
 ### Python / Django Projects
 - AI based emotion & gesture Recognizer
-- AI based face detection with Email Notification
 - Secure GUI Based Chat Application
 - Secure File Encryptor
-- Windows Automation Bot Pro
 - Django based event booking system
 - Django based price monitor web apps
+- AI Face Detection with Email Notification
+
+### Arduino Projects
+- Arduino AC Voltage Protection System
+- Portable ECG Monitoring System and Heart Disease Detection
 
 ### C Projects
 - RTOS Implementation
-
-## 🎨 Customization
-
-To customize this portfolio for your own use:
-
-1. **Update personal information** in all HTML files
-2. **Replace project links** with your own GitHub repositories
-3. **Update social media links**
-4. **Modify colors** in `assets/css/style.css`
-5. **Add your resume** to `assets/resume/`
 
 ## 📄 License
 
