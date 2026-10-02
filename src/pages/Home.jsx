@@ -166,15 +166,15 @@ const Home = () => {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {featuredProjects.map((project) => (
-              <div key={project.id} className="bg-dark-900 rounded-xl overflow-hidden hover:border-primary-500 border border-dark-700 transition-all duration-300 hover:shadow-lg hover:shadow-primary-500/10 group">
-                <div className={`h-48 bg-gradient-to-br ${project.color} flex items-center justify-center overflow-hidden`}>
+              <div key={project.id} className="bg-dark-900 rounded-xl overflow-hidden hover:border-primary-500 border border-dark-700 transition-all duration-300 hover:shadow-lg hover:shadow-primary-500/10 group flex flex-col">
+                <div className={`h-48 shrink-0 bg-gradient-to-br ${project.color} flex items-center justify-center overflow-hidden`}>
                   {project.image && (
                     <img src={project.image.startsWith('/') ? `${import.meta.env.BASE_URL}${project.image.slice(1)}` : project.image} alt={project.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
                   )}
                 </div>
-                <div className="p-6">
+                <div className="p-6 flex flex-col flex-grow">
                   <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>
-                  <p className="text-gray-400 mb-4 text-sm h-16">{project.description}</p>
+                  <p className="text-gray-400 mb-4 text-sm flex-grow line-clamp-4">{project.description}</p>
                   <div className="flex flex-wrap gap-2 mb-6">
                     {project.tech.slice(0, 3).map((t, idx) => (
                       <span key={idx} className={`px-3 py-1 bg-dark-800 text-xs rounded-full border border-dark-700 text-gray-300`}>
@@ -182,9 +182,11 @@ const Home = () => {
                       </span>
                     ))}
                   </div>
-                  <Link to="/projects" className="text-primary-500 hover:text-primary-400 font-semibold text-sm">
-                    View Details &rarr;
-                  </Link>
+                  <div className="mt-auto">
+                    <Link to="/projects" className="text-primary-500 hover:text-primary-400 font-semibold text-sm">
+                      View Details &rarr;
+                    </Link>
+                  </div>
                 </div>
               </div>
             ))}
