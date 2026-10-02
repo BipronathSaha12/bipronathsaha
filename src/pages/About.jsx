@@ -26,7 +26,7 @@ const About = () => {
             className="relative"
           >
             <div className="w-64 h-64 md:w-80 md:h-80 mx-auto rounded-full overflow-hidden border-4 border-primary-500 shadow-xl shadow-primary-500/20">
-              <img src="/assets/img/bipro.jpeg" alt="Bipronath Saha" className="w-full h-full object-cover object-top" onError={(e) => { e.target.src = 'https://via.placeholder.com/400'; }} />
+              <img src={`${import.meta.env.BASE_URL}assets/img/bipro.jpeg`} alt="Bipronath Saha" className="w-full h-full object-cover object-top" onError={(e) => { e.target.src = 'https://via.placeholder.com/400'; }} />
             </div>
           </motion.div>
 
