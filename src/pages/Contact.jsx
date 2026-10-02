@@ -16,15 +16,37 @@ const Contact = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Simulate form submission
     setStatus('Sending...');
-    setTimeout(() => {
-      setStatus('Message sent successfully!');
-      setFormData({ name: '', email: '', subject: '', message: '' });
+
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/bipronathsaha@gmail.com", {
+        method: "POST",
+        headers: { 
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message
+        })
+      });
+
+      if (response.ok) {
+        setStatus('Message sent successfully!');
+        setFormData({ name: '', email: '', subject: '', message: '' });
+        setTimeout(() => setStatus(''), 5000);
+      } else {
+        setStatus('Failed to send message. Please try again.');
+        setTimeout(() => setStatus(''), 5000);
+      }
+    } catch (error) {
+      setStatus('An error occurred. Please try again later.');
       setTimeout(() => setStatus(''), 5000);
-    }, 1500);
+    }
   };
 
   return (

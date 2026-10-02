@@ -39,25 +39,24 @@ const Home = () => {
           }}
           className="absolute inset-0 z-0"
         />
-        
+
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="mb-4">
             <span className="inline-block px-4 py-2 bg-primary-500/20 text-primary-500 rounded-full text-sm font-mono">
               Welcome to my portfolio
             </span>
           </motion.div>
-          
+
           <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }} className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4">
             Hi, I'm <span className="text-primary-500">Bipronath Saha</span>
           </motion.h1>
-          
+
           <div className="text-2xl md:text-3xl lg:text-4xl text-gray-300 mb-8 font-semibold h-12">
             <TypeAnimation
               sequence={[
-                'Full Stack Developer', 1000,
+                'Full Stack Web Developer', 1000,
                 'Python Django Expert', 1000,
-                'React Developer', 1000,
-                'IoT Enthusiast', 1000
+                'React Developer', 1000
               ]}
               wrapper="span"
               speed={50}
@@ -65,12 +64,12 @@ const Home = () => {
               className="text-primary-400"
             />
           </div>
-          
+
           <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.6 }} className="text-lg text-gray-400 max-w-2xl mx-auto mb-10">
-            Full Stack Python Django Developer & Web Developer specializing in building modern, 
+            Full Stack Web Developer specializing in building modern,
             scalable web applications with cutting-edge technologies.
           </motion.p>
-          
+
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.8 }} className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/projects" className="inline-flex items-center justify-center px-8 py-3 bg-primary-500 text-white rounded-lg font-semibold hover:bg-primary-600 transition-all duration-300 shadow-lg hover:shadow-primary-500/30">
               <FaProjectDiagram className="mr-2" /> View Projects
@@ -79,7 +78,7 @@ const Home = () => {
               <FaEnvelope className="mr-2" /> Contact Me
             </Link>
           </motion.div>
-          
+
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 1 }} className="flex justify-center gap-6 mt-12">
             <a href="https://linkedin.com/in/bipronath-saha" target="_blank" rel="noopener noreferrer" className="text-white text-3xl hover:text-primary-500 transition-transform hover:-translate-y-1">
               <FaLinkedin />
@@ -100,9 +99,8 @@ const Home = () => {
                 About <span className="text-primary-500">Me</span>
               </h2>
               <p className="text-gray-400 mb-6 leading-relaxed">
-                I'm a passionate Full Stack Python Django Developer with expertise in building 
-                robust web applications. My journey in technology spans across embedded systems, 
-                AI-powered applications, and modern web development.
+                I'm a passionate Full Stack Web Developer with expertise in building
+                robust and scalable web applications using Django and React.js.
               </p>
               <Link to="/about" className="inline-flex items-center text-primary-500 hover:text-primary-400 font-semibold transition-colors">
                 Learn More &rarr;
@@ -169,14 +167,16 @@ const Home = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {featuredProjects.map((project) => (
               <div key={project.id} className="bg-dark-900 rounded-xl overflow-hidden hover:border-primary-500 border border-dark-700 transition-all duration-300 hover:shadow-lg hover:shadow-primary-500/10 group">
-                <div className={`h-48 bg-gradient-to-br ${project.color} flex items-center justify-center`}>
-                  <project.icon className={`text-6xl ${project.iconColor} group-hover:scale-110 transition-transform duration-300`} />
+                <div className={`h-48 bg-gradient-to-br ${project.color} flex items-center justify-center overflow-hidden`}>
+                  {project.image && (
+                    <img src={project.image} alt={project.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
+                  )}
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>
                   <p className="text-gray-400 mb-4 text-sm h-16">{project.description}</p>
                   <div className="flex flex-wrap gap-2 mb-6">
-                    {project.tech.slice(0,3).map((t, idx) => (
+                    {project.tech.slice(0, 3).map((t, idx) => (
                       <span key={idx} className={`px-3 py-1 bg-dark-800 text-xs rounded-full border border-dark-700 text-gray-300`}>
                         {t}
                       </span>

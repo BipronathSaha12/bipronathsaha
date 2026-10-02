@@ -11,7 +11,7 @@ const Footer = () => {
               <span className="text-primary-500">&lt;</span>BS<span className="text-primary-500">/&gt;</span>
             </Link>
             <p className="text-gray-400 mt-4">
-              Full Stack Python Django Developer & Web Developer based in Bangladesh.
+              Full Stack Web Developer based in Bangladesh.
             </p>
             <div className="flex gap-4 mt-4">
               <a href="https://linkedin.com/in/bipronath-saha" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary-500 transition-colors text-xl">
@@ -22,7 +22,7 @@ const Footer = () => {
               </a>
             </div>
           </div>
-          
+
           <div>
             <h3 className="text-white font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
@@ -32,7 +32,7 @@ const Footer = () => {
               <li><Link to="/contact" className="text-gray-400 hover:text-primary-500 transition-colors">Contact</Link></li>
             </ul>
           </div>
-          
+
           <div>
             <h3 className="text-white font-semibold mb-4">Contact</h3>
             <ul className="space-y-2 text-gray-400">
@@ -41,7 +41,7 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        
+
         <div className="border-t border-dark-800 mt-8 pt-8 text-center">
           <p className="text-gray-400">
             &copy; {new Date().getFullYear()} Bipronath Saha. All rights reserved.

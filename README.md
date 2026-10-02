@@ -4,7 +4,7 @@ A modern, interactive, fully responsive developer portfolio website built with R
 
 ## 👨‍💻 About
 
-This is my personal portfolio website showcasing my skills, projects, and experience as a Full Stack Python Django Developer & Web Developer.
+This is my personal portfolio website showcasing my skills, projects, and experience as a Full Stack Web Developer, specializing in Django and React.js.
 
 ## 🛠️ Tech Stack
 
@@ -96,12 +96,7 @@ The portfolio is fully responsive and optimized for:
 - Django based price monitor web apps
 - AI Face Detection with Email Notification
 
-### Arduino Projects
-- Arduino AC Voltage Protection System
-- Portable ECG Monitoring System and Heart Disease Detection
 
-### C Projects
-- RTOS Implementation
 
 ## 📄 License
 

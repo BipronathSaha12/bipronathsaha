@@ -6,7 +6,7 @@ import { projects } from '../data/projects';
 const Projects = () => {
   const [filter, setFilter] = useState('All');
   
-  const categories = ['All', 'React / Django', 'React', 'Python', 'Arduino', 'C'];
+  const categories = ['All', 'React / Django', 'React', 'Python', 'Arduino'];
   
   const filteredProjects = projects.filter(project => {
     if (filter === 'All') return true;
@@ -55,8 +55,10 @@ const Projects = () => {
                 key={project.id}
                 className="bg-dark-900 rounded-xl overflow-hidden hover:border-primary-500 border border-dark-700 transition-all duration-300 hover:shadow-lg hover:shadow-primary-500/10 group"
               >
-                <div className={`h-48 bg-gradient-to-br ${project.color} flex items-center justify-center`}>
-                  <project.icon className={`text-6xl ${project.iconColor} group-hover:scale-110 transition-transform duration-300`} />
+                <div className={`h-48 bg-gradient-to-br ${project.color} flex items-center justify-center overflow-hidden`}>
+                  {project.image && (
+                    <img src={project.image} alt={project.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
+                  )}
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>

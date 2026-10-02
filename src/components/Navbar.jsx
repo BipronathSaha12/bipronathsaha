@@ -51,6 +51,7 @@ const Navbar = () => {
               <NavLink 
                 key={link.name} 
                 to={link.path} 
+                end={link.path === '/'}
                 className={({isActive}) => `relative font-medium transition-colors hover:text-primary-500 ${isActive ? 'text-primary-500 after:w-full' : 'text-white after:w-0'} after:content-[''] after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:bg-primary-500 after:transition-all after:duration-300 hover:after:w-full`}
               >
                 {link.name}
@@ -85,12 +86,13 @@ const Navbar = () => {
       <div className={`md:hidden absolute w-full bg-dark-900/95 backdrop-blur-lg transition-all duration-300 ${isOpen ? 'top-16 opacity-100 visible' : '-top-48 opacity-0 invisible'}`}>
         <div className="px-4 py-4 space-y-3 shadow-lg">
           {navLinks.map((link) => (
-            <NavLink 
-              key={link.name} 
-              to={link.path} 
-              onClick={() => setIsOpen(false)}
-              className={({isActive}) => `block py-2 ${isActive ? 'text-primary-500 font-semibold' : 'text-white'} hover:text-primary-500 transition-colors`}
-            >
+              <NavLink 
+                key={link.name} 
+                to={link.path} 
+                end={link.path === '/'}
+                onClick={() => setIsOpen(false)}
+                className={({isActive}) => `block py-2 ${isActive ? 'text-primary-500 font-semibold' : 'text-white'} hover:text-primary-500 transition-colors`}
+              >
               {link.name}
             </NavLink>
           ))}
