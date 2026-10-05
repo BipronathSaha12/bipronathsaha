@@ -110,7 +110,7 @@ export const projects = [
     tech: ["React.JS", "Django", "Tailwind CSS", "PostgreSQL", "Render", "Vercel"],
     github: "https://github.com/BipronathSaha12/prisma-ai",
     liveDemo: "https://prisma-ai-one.vercel.app/",
-    image: "/assets/img/projects/prisma-ai.png",
+    image: "/assets/img/projects/prismaAI.png",
     color: "from-purple-500/20 to-purple-600/20",
     iconColor: "text-purple-500",
     featured: true
