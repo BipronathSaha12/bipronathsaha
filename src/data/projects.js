@@ -114,5 +114,18 @@ export const projects = [
     color: "from-purple-500/20 to-purple-600/20",
     iconColor: "text-purple-500",
     featured: true
+  },
+  {
+    id: 10,
+    title: "NexaChat",
+    description: "An LLM powered chatbox.",
+    category: "React / Django",
+    tech: ["React.Js", "Django", "Tailwind CSS", "PostgreSQL", "Vercel", "Render"],
+    github: "https://github.com/BipronathSaha12/nexachat",
+    liveDemo: "https://nexachat-zeta.vercel.app/",
+    image: "/assets/img/projects/nexachat.png",
+    color: "from-blue-500/20 to-blue-600/20",
+    iconColor: "text-blue-500",
+    featured: true
   }
 ];
