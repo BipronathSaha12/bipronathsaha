@@ -127,5 +127,19 @@ export const projects = [
     color: "from-blue-500/20 to-blue-600/20",
     iconColor: "text-blue-500",
     featured: true
+  },
+  {
+    id: 11,
+    title: "LexiDeck",
+    description: "A full-stack web application built with React and Django, using PostgreSQL and styled with Tailwind CSS.",
+    category: "React / Django",
+    tech: ["React.Js", "Django", "Tailwind CSS", "PostgreSQL", "Vercel", "Render"],
+    githubFrontend: "https://github.com/BipronathSaha12/lexideck-frontend",
+    githubBackend: "https://github.com/BipronathSaha12/lexideck-backend",
+    liveDemo: "https://lexideck-frontend.vercel.app/",
+    image: "/assets/img/projects/lexideck.png",
+    color: "from-emerald-500/20 to-emerald-600/20",
+    iconColor: "text-emerald-500",
+    featured: true
   }
 ];
