@@ -52,7 +52,7 @@ const About = () => {
               </p>
             </div>
 
-            <a href="https://drive.google.com/file/d/1Y-sLVa8MLm116xH9Smm4YXmx9OXCgilf/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="inline-block mt-8 px-8 py-3 bg-primary-500 text-white rounded-lg font-semibold hover:bg-primary-600 transition-colors shadow-lg">
+            <a href="https://drive.google.com/file/d/1X82dlQkVTCh17xt9diJCZLliuaVT8aBn/view?usp=drive_link" target="_blank" rel="noopener noreferrer" className="inline-block mt-8 px-8 py-3 bg-primary-500 text-white rounded-lg font-semibold hover:bg-primary-600 transition-colors shadow-lg">
               Download Resume
             </a>
           </motion.div>
