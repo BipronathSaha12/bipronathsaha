@@ -30,12 +30,12 @@ const Projects = () => {
         </motion.div>
 
         {/* Filters */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12 sticky top-20 z-30 bg-dark-800/90 backdrop-blur-md py-4">
+        <div className="flex overflow-x-auto justify-start md:justify-center gap-3 md:gap-4 mb-12 sticky top-20 z-30 bg-dark-800/90 backdrop-blur-md py-4 px-2 sm:px-0 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] w-full">
           {categories.map(cat => (
             <button
               key={cat}
               onClick={() => setFilter(cat)}
-              className={`px-6 py-2 rounded-full font-medium transition-all duration-300 ${filter === cat ? 'bg-primary-500 text-white shadow-lg shadow-primary-500/30' : 'bg-dark-700 text-gray-300 hover:bg-dark-600'}`}
+              className={`whitespace-nowrap flex-shrink-0 px-5 md:px-6 py-2 rounded-full font-medium transition-all duration-300 ${filter === cat ? 'bg-primary-500 text-white shadow-lg shadow-primary-500/30' : 'bg-dark-700 text-gray-300 hover:bg-dark-600'}`}
             >
               {cat}
             </button>
