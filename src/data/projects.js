@@ -46,7 +46,7 @@ export const projects = [
     description: "A secure file protection application designed to encrypt and decrypt files and folders, helping users protect sensitive data through strong cryptographic techniques.",
     category: "Python",
     tech: ["Python", "Security", "AES-256"],
-    github: "https://github.com/BipronathSaha12/ChiperVaultt",
+    github: "https://github.com/BipronathSaha12/CipherVault",
     image: "/assets/img/projects/ciphervault.png",
     color: "from-pink-500/20 to-pink-600/20",
     iconColor: "text-pink-500",

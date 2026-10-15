@@ -55,43 +55,89 @@ const Projects = () => {
                 key={project.id}
                 className="bg-dark-900 rounded-xl overflow-hidden hover:border-primary-500 border border-dark-700 transition-all duration-300 hover:shadow-lg hover:shadow-primary-500/10 group flex flex-col h-full"
               >
+                {/* Project Image / Thumbnail */}
                 <div className={`h-48 shrink-0 bg-gradient-to-br ${project.color} flex items-center justify-center overflow-hidden`}>
                   {project.image && (
-                    <img src={project.image.startsWith('/') ? `${import.meta.env.BASE_URL}${project.image.slice(1)}` : project.image} alt={project.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
+                    <img
+                      src={project.image.startsWith('/') ? `${import.meta.env.BASE_URL}${project.image.slice(1)}` : project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                    />
                   )}
                 </div>
-                <div className="p-6 flex flex-col flex-grow">
-                  <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>
-                  <p className="text-gray-400 mb-4 text-sm flex-grow line-clamp-4">{project.description}</p>
-                  <div className="flex flex-wrap gap-2 mb-6">
+
+                {/* Card Body */}
+                <div className="p-5 sm:p-6 flex flex-col flex-grow gap-3">
+
+                  {/* Title */}
+                  <h3 className="text-base sm:text-lg font-bold text-white leading-snug line-clamp-2">
+                    {project.title}
+                  </h3>
+
+                  {/* Description — grows to fill available space */}
+                  <p className="text-gray-400 text-sm leading-relaxed flex-grow line-clamp-3">
+                    {project.description}
+                  </p>
+
+                  {/* Tech Badges — capped so they never overflow the card */}
+                  <div className="flex flex-wrap gap-1.5 overflow-hidden" style={{ maxHeight: '4.5rem' }}>
                     {project.tech.map((t, idx) => (
-                      <span key={idx} className={`px-3 py-1 bg-dark-800 text-xs rounded-full border border-dark-700 text-gray-300`}>
+                      <span
+                        key={idx}
+                        className="px-2.5 py-1 bg-dark-800 text-xs rounded-full border border-dark-700 text-gray-300 whitespace-nowrap"
+                      >
                         {t}
                       </span>
                     ))}
                   </div>
-                  <div className="flex gap-4 mt-auto">
+
+                  {/* Divider */}
+                  <div className="border-t border-dark-700" />
+
+                  {/* Action Links — always at bottom, wrap gracefully on small screens */}
+                  <div className="flex flex-wrap gap-x-4 gap-y-2 items-center pt-0.5">
                     {project.github && (
-                      <a href={project.github} target="_blank" rel="noopener noreferrer" className="flex items-center text-primary-500 hover:text-primary-400 transition-colors text-sm font-semibold">
-                        <FaGithub className="mr-2" /> Code
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-1.5 text-primary-500 hover:text-primary-400 transition-colors text-sm font-semibold"
+                      >
+                        <FaGithub className="text-base" /> Code
                       </a>
                     )}
                     {project.githubFrontend && (
-                      <a href={project.githubFrontend} target="_blank" rel="noopener noreferrer" className="flex items-center text-primary-500 hover:text-primary-400 transition-colors text-sm font-semibold">
-                        <FaGithub className="mr-2" /> Frontend
+                      <a
+                        href={project.githubFrontend}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-1.5 text-primary-500 hover:text-primary-400 transition-colors text-sm font-semibold"
+                      >
+                        <FaGithub className="text-base" /> Frontend
                       </a>
                     )}
                     {project.githubBackend && (
-                      <a href={project.githubBackend} target="_blank" rel="noopener noreferrer" className="flex items-center text-primary-500 hover:text-primary-400 transition-colors text-sm font-semibold">
-                        <FaGithub className="mr-2" /> Backend
+                      <a
+                        href={project.githubBackend}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-1.5 text-primary-500 hover:text-primary-400 transition-colors text-sm font-semibold"
+                      >
+                        <FaGithub className="text-base" /> Backend
                       </a>
                     )}
                     {project.liveDemo && (
-                      <a href={project.liveDemo} target="_blank" rel="noopener noreferrer" className="flex items-center text-green-400 hover:text-green-300 transition-colors text-sm font-semibold">
-                        <FaExternalLinkAlt className="mr-2" /> Live Demo
+                      <a
+                        href={project.liveDemo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-1.5 text-green-400 hover:text-green-300 transition-colors text-sm font-semibold"
+                      >
+                        <FaExternalLinkAlt className="text-xs" /> Live Demo
                       </a>
                     )}
                   </div>
+
                 </div>
               </motion.div>
             ))}
