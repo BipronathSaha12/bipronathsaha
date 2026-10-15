@@ -55,7 +55,7 @@ export const projects = [
   {
     id: 5,
     title: "CardioSense — Portable ECG monitoring & Heart Health System",
-    description: "A portable ECG monitoring system designed to capture and visualize real-time cardiac signals, providing users with an accessible way to monitor heart activity through a compact embedded device.",
+    description: "Portable ECG monitoring device built with ESP32 that captures and visualizes real-time cardiac signals, enabling accessible heart health tracking via compact embedded hardware.",
     category: "Arduino",
     tech: ["ESP32", "IoT", "Healthcare"],
     github: "https://github.com/BipronathSaha12/CardioSense",
@@ -67,7 +67,7 @@ export const projects = [
   {
     id: 6,
     title: "PowerGuard — Smart electrical protection system",
-    description: "An Arduino-based AC voltage protection system that continuously monitors mains voltage and automatically disconnects the load when over-voltage or under-voltage conditions are detected, helping protect connected electrical equipment.",
+    description: "Arduino-based AC voltage protection system that auto-disconnects loads during over/under-voltage conditions, safeguarding connected electrical equipment in real time.",
     category: "Arduino",
     tech: ["Arduino", "C++"],
     github: "https://github.com/BipronathSaha12/PowerGuard",
