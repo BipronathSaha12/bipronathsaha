@@ -141,5 +141,18 @@ export const projects = [
     color: "from-emerald-500/20 to-emerald-600/20",
     iconColor: "text-emerald-500",
     featured: true
+  },
+  {
+    id: 12,
+    title: "FolioVerse",
+    description: "An enterprise-grade Book Store Management System & REST API with 4-layer defense-in-depth security, RBAC, and MFS payment gateway simulation.",
+    category: "React / Django",
+    tech: ["React", "Django REST Framework", "Tailwind CSS", "PostgreSQL", "Vercel", "Render"],
+    github: "https://github.com/BipronathSaha12/FolioVerse",
+    liveDemo: "https://folio-verse-three.vercel.app/",
+    image: "/assets/img/projects/folioverse.png",
+    color: "from-indigo-500/20 to-purple-600/20",
+    iconColor: "text-indigo-500",
+    featured: true
   }
 ];
