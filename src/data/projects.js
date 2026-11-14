@@ -154,5 +154,18 @@ export const projects = [
     color: "from-indigo-500/20 to-purple-600/20",
     iconColor: "text-indigo-500",
     featured: true
+  },
+  {
+    id: 13,
+    title: "MediCare Clinic",
+    description: "A high-performance hospital reception and clinical scheduling dashboard featuring real-time physician triage, synchronized appointment booking, and live KPI analytics.",
+    category: "React",
+    tech: ["React 19", "Vite", "Tailwind CSS", "Vercel"],
+    github: "https://github.com/BipronathSaha12/MediCare-Clinic",
+    liveDemo: "https://medi-care-clinic-eight.vercel.app/",
+    image: "/assets/img/projects/MediCare.png",
+    color: "from-teal-500/20 to-emerald-600/20",
+    iconColor: "text-teal-500",
+    featured: true
   }
 ];
