@@ -167,5 +167,18 @@ export const projects = [
     color: "from-teal-500/20 to-emerald-600/20",
     iconColor: "text-teal-500",
     featured: true
+  },
+  {
+    id: 14,
+    title: "RUM Management System",
+    description: "An enterprise-grade hospital management web application featuring multi-role portals (Patient, Doctor, Admin), live appointment scheduling, and SSLCommerz payment integration.",
+    category: "React / Django",
+    tech: ["React", "Django REST Framework", "Tailwind CSS", "PostgreSQL", "SSLCommerz", "Vercel", "Render"],
+    github: "https://github.com/BipronathSaha12/rum-management-system",
+    liveDemo: "https://rum-management-system-jbjq.vercel.app/",
+    image: "/assets/img/projects/rum.png",
+    color: "from-sky-500/20 to-blue-600/20",
+    iconColor: "text-sky-500",
+    featured: true
   }
 ];
